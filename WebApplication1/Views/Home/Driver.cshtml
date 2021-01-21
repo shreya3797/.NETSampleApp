@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication1.Models.DriverModel>
+
+@{
+    ViewBag.Title = "Driver";
+}
+
+<h2>Driver</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RacesParticipated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RacesWon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RacesLost)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RacesParticipated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RacesWon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RacesLost)
+        </td>        
+    </tr>
+}
+
+</table>

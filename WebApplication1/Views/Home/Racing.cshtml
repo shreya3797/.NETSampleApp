@@ -1,0 +1,73 @@
+﻿@model IEnumerable<WebApplication1.Models.RacingModel>
+
+@{
+    ViewBag.Title = "Racing Details";
+}
+
+<h2>Racing</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RacingID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrackLength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DriverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TopSpeedDriven)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompletionTime)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RacingID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrackName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrackLength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TopSpeedDriven)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompletionTime)
+        </td>        
+    </tr>
+}
+
+</table>
